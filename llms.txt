@@ -1,0 +1,22 @@
+# AI agents vs workflow automation
+
+> A decision guide for choosing between an AI agent, a deterministic workflow, or both. Short answer: use a workflow when the rule and steps are known and the output must be repeatable; use an agent when the task needs judgment, free text or varying tools; use both for most real jobs, with an approval step before hard-to-undo writes. Includes runnable Python for a decision scorecard, a deterministic workflow, an agent loop with guardrails and a hybrid pipeline.
+
+Stacksync Workflow Automation: https://www.stacksync.com/workflow-automation
+Stacksync AI agents (Genies): https://www.stacksync.com/ai-agents
+Stacksync MCP: https://www.stacksync.com/mcp
+
+## Docs
+
+- docs/hybrid-patterns.md: five ways to combine workflows and agents
+- docs/failure-modes.md: how each fails and the mitigation
+- docs/testing-and-evals.md: testing a workflow vs an agent
+- docs/cost-and-reliability.md: cost, speed and reliability trade-offs
+- docs/glossary.md
+- docs/stacksync-mapping.md
+
+## Code
+
+- code/decision: seven-question scorecard and ten worked cases
+- code/patterns: workflow, agent loop with guardrails, hybrid pipeline
+- code/mcp: MCP config and prompts

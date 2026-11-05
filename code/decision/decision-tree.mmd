@@ -1,0 +1,16 @@
+flowchart TD
+  A[New task] --> B{Can you write the full rule down?}
+  B -- Yes --> C{Same steps every time?}
+  C -- Yes --> W[Workflow]
+  C -- No --> H[Hybrid: workflow plus an agent step]
+  B -- No --> D{Does it need judgment or free text?}
+  D -- No --> H
+  D -- Yes --> E{Do the right tools vary per case?}
+  E -- Yes --> AG[Agent with guardrails]
+  E -- No --> H
+  W --> F{Writes hard to undo?}
+  H --> F
+  AG --> F
+  F -- Yes --> P[Add an approval step before the write]
+  F -- No --> Z[Log every run and ship]
+  P --> Z
